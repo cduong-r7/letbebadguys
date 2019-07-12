@@ -1,0 +1,14 @@
+version: '2' 
+
+services:
+  django: 
+    container_name: container 
+    build:
+       context: . 
+       dockerfile: dockerfile 
+    image: badguys_docker 
+    tty: true 
+    volumes: 
+      - .:/app
+    ports: 
+      - "8080:80"
